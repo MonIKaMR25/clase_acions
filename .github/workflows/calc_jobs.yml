@@ -35,7 +35,3 @@ jobs:
       - uses: actions/checkout@v4
       - name: Mostrar mensaje final
         run: echo "Todas las operaciones de calculadora se ejecutaron correctamente"
-    steps:
-      - uses: actions/checkout@v4
-      - name: Mostrar mensaje final
-        run: echo "Todas las operaciones de calculadora se ejecutaron correctamente"
