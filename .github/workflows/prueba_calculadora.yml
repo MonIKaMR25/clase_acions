@@ -1,20 +1,20 @@
-name: Prueba automaizada de calculadora
-on: 
-  push
+name: Probar Calculadora
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  claculadora-job:
+  calculadora-job:
     runs-on: ubuntu-latest
     steps:
       - name: Clonar repositorio
         uses: actions/checkout@v4
 
-      - name: Probar operación
-        run: 
-          echo "Probar operación de suma"
-          echo "Primero instalado Node.js
+      - name: Ejecutar operaciones de prueba
+        run: |
+          echo "Instalando Node.js..."
           sudo apt-get update && sudo apt-get install -y nodejs npm
-          echo "Crear archivo de pruebas"
           echo "Creando archivo de prueba..."
           echo "const calc = require('./calculadora'); console.log('Suma 2+3:', calc.sumar(2,3));" > test.js
           node test.js
